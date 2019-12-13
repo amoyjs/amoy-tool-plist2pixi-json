@@ -41,5 +41,10 @@ or
 
 then we will see the dir named out or file if you convert a file.
 
-lilieminglook@gmail.com
+### some usefull particle Editor
+
+[RevoltFX](https://editor.revoltfx.electronauts.net/)
+[PixiParticleEditor](https://pixijs.io/pixi-particles-editor/#)
+
+contact:lilieminglook@gmail.com
 
