@@ -2,7 +2,9 @@ TextureUnpacker
 ========================
 
 # Overview
-Use this script to unpack **.png** sprites from the sprite atlas (providing a **.plist** or **.json** data file and a **.png** file) packed by [TexturePacker](http://www.codeandweb.com/texturepacker/).
+Use this unpacker2Pixi.py script to unpack **.png** sprites from the sprite atlas (providing a **.plist** or **.json** data file and a **.png** file) packed by [TexturePacker](http://www.codeandweb.com/texturepacker/) then use texturepacker to packing these **.png** file  export to json and png files for pixi
+
+Use this particle2Pixi.py script to convert plist file to pixi json file (providing a **.plist** file) packed by [ParticleDesinger](https://www.71squared.com/particledesigner) then use pixiparticle plugin to play paritcle animation.
 
 # Dependencies
   - [Python](http://www.python.org)
@@ -10,7 +12,9 @@ Use this script to unpack **.png** sprites from the sprite atlas (providing a **
 
 # Usage
 	
-	$ python unpacker.py <filename> [<format>]
+	$ python unpacker2Pixi.py <filename> [<format>] only support plist
+
+    $ python particle2Pixi.py <filename> [<format>] only support plist 
 	
 ## filename
 
@@ -24,24 +28,18 @@ Use this script to unpack **.png** sprites from the sprite atlas (providing a **
 
 # Examples
 
-### Default (plist) example
+### example
 
 We have a pair of sprite atlas files named **Sprite.plist** and **Sprite.png** packed by [TexturePacker](http://www.codeandweb.com/texturepacker/).
 Put them in the same folder as the **unpacker.py** script and run one of the following commands:
 
-    python unpacker.py Sprite
+    python unpacker2Pixi.py dir|file plist
     
 or
 
-    python unpacker.py Sprite plist
-    
-    
-Script will generate a folder named **Sprite** containing all the sprites from the sprite atlas.
+    python particle2Pixi.py dir|file plist
 
-### JSON example
+then we will see the dir named out or file if you convert a file.
 
-If you have **Sprite.json** data file instead of the **Sprite.plist** one run the following command:
+lilieminglook@gmail.com
 
-    python unpacker.py Sprite json
-    
-Result will be the same.
