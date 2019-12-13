@@ -1,4 +1,4 @@
-Plist convert for pixi
+Plist converter for pixi
 ========================
 
 # Overview
@@ -44,6 +44,7 @@ then we will see the dir named out or file if you convert a file.
 ### some usefull particle Editor
 
 [RevoltFX](https://editor.revoltfx.electronauts.net/)
+
 [PixiParticleEditor](https://pixijs.io/pixi-particles-editor/#)
 
 contact:lilieminglook@gmail.com
