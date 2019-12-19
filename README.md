@@ -27,6 +27,8 @@ Use this particle2Pixi.py script to convert plist file to pixi json file (provid
 - Data file format. Valid values are **plist** and **json**. If omitted **plist** format is assumed.
 
 # Examples
+Use the exported json data ,need amoy-ext-PixiParticles.
+- [amoy-ext-PixiParticles](https://github.com/amoyjs/amoy-ext-PixiParticles
 
 ### example
 
@@ -47,5 +49,5 @@ then we will see the dir named out or file if you convert a file.
 
 [PixiParticleEditor](https://pixijs.io/pixi-particles-editor/#)
 
-contact:lilieminglook@gmail.com
+
 
