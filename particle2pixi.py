@@ -117,7 +117,7 @@ def gen_json_from_data(filename, ext):
             "max": plist_dict["particleLifespan"] + plist_dict["particleLifespanVariance"]
         }
 
-        pixijson["noRotation"] = False
+        pixijson["noRotation"] = (plist_dict["rotationStart"] - plist_dict["rotationEnd"]) == 0
 
         if(int(plist_dict["blendFuncDestination"]) == 1):
             pixijson["blendMode"] = "add" 
