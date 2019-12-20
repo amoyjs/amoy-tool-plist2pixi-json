@@ -173,7 +173,7 @@ def get_sources_file(filename):
         print("Make sure you have both " + data_filename + " and " + png_filename + " files in the same directory")
 
 def pack2pxi(filename):
-    path, fn = os.path.split(filename)
+    _, fn = os.path.split(filename)
     cmd = "/usr/local/bin/TexturePacker --smart-update --format json --texture-format png  --data "+ filename +"/"+fn+".json --sheet "+filename+"/"+fn+".png "+ filename +"/*.png"
     os.system(cmd)
 

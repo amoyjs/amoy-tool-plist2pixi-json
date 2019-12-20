@@ -100,8 +100,16 @@ def gen_json_from_data(filename, ext):
 
         pixijson['startRotation'] = {
             #旋转方向不一样
-            "min": 360-(plist_dict["angle"] - plist_dict["angleVariance"]),
-            "max": 360-(plist_dict["angle"] + plist_dict["angleVariance"])
+            "max": 360-(plist_dict["rotationStart"] - plist_dict["angleVariance"]),
+            "min": 360-(plist_dict["rotationEnd"] + plist_dict["angleVariance"]),
+            "viriance":plist_dict['rotationStartVariance'] or plist_dict['rotationEndVariance'] 
+        }
+
+        speed = plist_dict["rotatePerSecond"] if plist_dict["rotatePerSecond"] > 0 else pixijson["startRotation"]["max"]- pixijson["startRotation"]["min"]
+        pixijson['rotationSpeed'] = {
+            #旋转速度
+            "min": speed,
+            "max": speed
         }
 
         pixijson['lifetime'] = {
@@ -110,6 +118,7 @@ def gen_json_from_data(filename, ext):
         }
 
         pixijson["noRotation"] = False
+
         if(int(plist_dict["blendFuncDestination"]) == 1):
             pixijson["blendMode"] = "add" 
         else:
