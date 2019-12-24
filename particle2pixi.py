@@ -119,7 +119,7 @@ def gen_json_from_data(filename, ext):
 
         pixijson["noRotation"] = (plist_dict["rotationStart"] - plist_dict["rotationEnd"]) == 0
 
-        if(int(plist_dict["blendFuncDestination"]) == 1):
+        if(int(plist_dict["blendFuncDestination"]) != 1):
             pixijson["blendMode"] = "add" 
         else:
             pixijson["blendMode"] = "normal" 
@@ -216,7 +216,7 @@ def copyFile(file0):
         shutil.move(file0+".json", "out/"+fn+".json")
         # print("copy::",path + "/" +cacheDict[file0])
         if(os.path.exists(path +"/"+ cacheDict[file0])):
-            shutil.copy(path +"/"+ cacheDict[file0], "out/"+fn+".png")
+            shutil.copy(path +"/"+ cacheDict[file0], "out/"+cacheDict[file0])
     #    shutil.rmtree(path)
 
 def copyJsonFile(path_or_name):
