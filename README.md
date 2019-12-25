@@ -7,7 +7,7 @@ Use this unpacker2Pixi.py script to unpack **.png** sprites from the sprite atla
 Use this particle2Pixi.py script to convert plist file to pixi json file (providing a **.plist** file) packed by [ParticleDesinger](https://www.71squared.com/particledesigner) then use pixiparticle plugin to play paritcle animation.
 
 # Dependencies
-  - [Python](http://www.python.org)
+  - [Python3](http://www.python.org)
   - [Pillow (PIL fork)](https://github.com/python-pillow/Pillow) 
 
 # Usage

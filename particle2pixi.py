@@ -150,10 +150,18 @@ def gen_json_from_data(filename, ext):
 
         if(("textureImageData" in plist_dict.keys()) and plist_dict["textureImageData"] and notExits):
             print("create a textureFileName", plist_dict["textureFileName"])
-            imgdata = gzip.decompress(base64.b64decode(plist_dict["textureImageData"]))
-            image_data = BytesIO(imgdata)
-            img = Image.open(image_data)
-            img.save(path+"/"+imageName)
+            try:
+                imgdata = gzip.decompress(base64.b64decode(plist_dict["textureImageData"].encode("utf-8")))
+                image_data = BytesIO(imgdata)
+                img = Image.open(image_data)
+                img.save(path+"/"+imageName)
+            except OSError as err:
+                print("OS error: {0}".format(err))
+            else:
+                print("error !! {0}".format(plist_dict["textureFileName"]))
+            finally:
+                pass
+            
 
         cacheDict[filename] = plist_dict["textureFileName"]
 
